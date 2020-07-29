@@ -1,43 +1,186 @@
+// Mobile-first / Common styles
+@menu__font-color: #666;
+@menu__transition: all 0.1s ease-out;
+& when (@media-common = true) {
+    .footer {
+        &.content {
+          .menu {
+    
+            .lib-vendor-prefix-display(flex);
+            .lib-vendor-prefix-flex-wrap(wrap);
+    
+            box-sizing: border-box;
+            float: left;
+            width: 100%;
+            color: @menu__font-color;
+            padding: 30px;
+            border-bottom: 1px solid #dddddd;
+    
+            &__column {
+              display: block;
+              width: 100%;
+            }
+    
+            &__inputicon {
+              position: absolute;
+              min-width: 40px;
+              padding: 10px;
+              right: 20px;
+            }
+     
+            h4 {
+              margin: 10px 10px 10px 0;
+              padding-bottom: 5px;
+              font-size: 18px;
+              font-family: @font-family__base__lora;
+              font-weight: 300;
+            }
+     
+            ul {
+              margin: 0;
+            }
+     
+            li {
+              font-size: 13px;
+              margin-bottom: 4px;
+            }
+     
+            a {
+              font-family: @font-family__base__roboto;
+              padding: 3px 0 3px 0;
+              color: @menu__font-color;
+              .lib-css(transition, @menu__transition);
+     
+              &:hover {
+                padding-left: 20px;
+     
+                color: @color-blue1;
+                text-decoration: none;
+              }
+            }
+    
+            .footer--newletter__input{
+                padding-left: 16px;
+                font-family: @font-family__base__roboto;
+                height: 40px;
+                width: 280xp;
+                color: #797979;
+                font-size: 13;
+            }
+            .footer--newletter__list{
+                background-color: red;
+            }
+          }
+        }
+    
+        .footer--bottom{
+          height: 94px;
+
+          &__icon{
+            margin: 26px 0px;
+            float: right;
+            background-color: #ffffff;
+          }
+
+          img{
+            height: 30px;
+            width: 60px;
+          }
+    
+        }
+
+        .copyright { line-height: 90px; }
+      }
+  }
+  
+  // Mobile-specific styles
+  & when (@media-target = 'mobile') {
+    // All screen sizes (< 768px)
+    @media only screen and (max-width: (@screen__m - 1)) {
+        .footer {
+            &.content {
+                .menu {
+                    border-bottom: none;
+                    &__column--icon {
+                        float: right;
+                        margin-right: 20px;
+                    }
+                    ul { display: none; }
+                    h4 {
+                        padding: 19px 0;
+                        border-bottom: 1px solid #dddddd;
+                    }
+                    h4:hover ul {
+                       display: block;
+                    }
+                }
+            }
+        }
+
+        .footer--bottom{
+            &__lasteway { display: none; }
+            &__ieway { text-align: center; }
+            img{ margin: 0; }
+        }
+    }
+  
+    // XXS (>= 0, < 320px)
+    @media only screen and (min-width: 0px) and (max-width: (@screen__xxs - 1)) {
 //
-//  Mobile (styles-m.css)
-//  _____________________________________________
+    }
+  
+    // XS (>= 320px, < 480px)
+    @media only screen and (min-width: @screen__xxs) and (max-width: (@screen__xs - 1)) {
+    //   @import "_mobile/_xs/_header";
+    }
+  
+    // S (>= 480px, < 640px)
+    @media only screen and (min-width: @screen__xs) and (max-width: (@screen__s - 1)) {
+    //   @import "_mobile/_s/_header";
+    }
+  
+    // M (>= 640px, < 768px)
+    @media only screen and (min-width: @screen__s) and (max-width: (@screen__m - 1)) {
+    //   @import "_mobile/_m/_header";
+    }
+  }
+  
+  // Tablet (>= 768px)
+  .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .footer {
+        &.content {
+            .menu {
+                &__column {
+                width: 50%;
+                }
+            }
+        }
+    }
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
-    // your code
-}
+    .footer--bottom{
+        &__ieway{
+          display: none;
+        }
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
-    // your code
-}
-
-//
-//  Tablet (for the front-end)
-//  _____________________________________________
-
-@media only screen and (max-width: @screen__m) {
-    // your code
-}
-
-//
-//  Tablets (for the back-end)
-//  _____________________________________________
-
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__l) {
-    // your code
-}
-
-//
-//  Desktop (style-l.css)
-//  _____________________________________________
-
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-    // your code
-}
-
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
-    // your code
-}
-
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
-    // your code
-}
+        img{
+          margin-right: 10px;
+        }
+  
+    }
+  }
+  //1024
+  .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .footer {
+        &.content {
+            .menu {
+                &__column {
+                width: 25%;
+                }
+            }
+        }
+    }
+  }
+  // Large (>= 1440px)
+  .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+      //
+  }
