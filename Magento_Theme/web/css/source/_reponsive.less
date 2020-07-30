@@ -2,6 +2,15 @@
 @menu__font-color: #666;
 @menu__transition: all 0.1s ease-out;
 & when (@media-common = true) {
+    .footer--top {
+
+      &__content { min-height: 140px; position: relative; }
+      &__banner { position: absolute; transform: translate(-50%, -50%); top: 50%; left: 50%;}
+      h1 { font-size: 24px; font-family:  @font-family__base__lora; font-weight: 700; }
+      p { font-size: 15px; font-family: @font-family__base__roboto;}
+      a { position: absolute; bottom: 0px; left: 22% } 
+    }
+
     .footer {
         &.content {
           .menu {
@@ -88,7 +97,6 @@
           }
     
         }
-
         .copyright { line-height: 90px; }
       }
   }
@@ -97,6 +105,9 @@
   & when (@media-target = 'mobile') {
     // All screen sizes (< 768px)
     @media only screen and (max-width: (@screen__m - 1)) {
+      .footer--top {
+        p { display: none; }
+      }
         .footer {
             &.content {
                 .menu {
