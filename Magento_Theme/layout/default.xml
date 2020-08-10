@@ -8,16 +8,12 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="footer-container">
-            <referenceBlock name="footer_links" remove="true" />
-            <!-- <referenceBlock name="copyright" remove="true"/> -->
-            <referenceBlock name="form.subscribe" remove="true"/>
-            <referenceBlock name="report.bugs" remove="true" />
-            <block class="Magento\Framework\View\Element\Template" name="footer.top.menu" before="footer" template="Magento_Theme::footer_top.phtml"/>
-            <container name="footer" as="footer" label="Page Footer" htmlTag="div" htmlClass="footer content">
-                <block class="Magento\Framework\View\Element\Template" name="footer.navigation.menu" before="-" template="Magento_Theme::footer_menu.phtml"/>
-                <block class="Magento\Framework\View\Element\Template" name="footer.bottom.menu" after="footer.navigation.menu" template="Magento_Theme::footer_bottom.phtml"/>
-                <block class="Magento\Theme\Block\Html\Footer" name="copyright" template="Magento_Theme::html/copyright.phtml"/>
-            </container>
+            
+            <block class="Magento\Framework\View\Element\Template" name="Canberra_Showroom" before="Footer_Top_Up" template="Magento_Theme::canberra_showroom.phtml"/>
+            <block class="Magento\Theme\Block\Html\Footer" name="Footer_Top_Up" before="Footer_Top_Dow" template="Magento_Theme::footer_topup.phtml"/>
+            <block class="Magento\Theme\Block\Html\Footer" name="Footer_Top_Dow" before="footer" template="footer_topdow.phtml"/>
+
+            <block class="Magento\Theme\Block\Html\Footer" name="Footer_Bottom" after="footer" template="Magento_Theme::footer_bottom.phtml"/>
         </referenceContainer>
     </body>
-</page>
+</page> 
