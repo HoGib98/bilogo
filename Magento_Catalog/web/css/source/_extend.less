@@ -1,0 +1,165 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+//
+//  Extend
+//  _____________________________________________
+
+@import 'module/_listings_extend.less';
+@import 'module/_toolbar_extend.less';
+@import '_widgets_extend.less';
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .table-comparison {
+        .product-item-actions {
+            > .actions-primary {
+                + .actions-secondary {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    //
+    //css custom
+    // ___________________________________________
+
+    .product-info-main {
+        width: 32% !important;
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        padding: 15px;
+
+        .product-options-bottom {
+            .box-tocart {
+                .decrease-qty,
+                .increase-qty,
+                .input-text {
+                    height: 40px;
+                    width: 40px;
+                    margin-bottom: 4px;
+                    border-radius: 0px;
+                }
+    
+                .input-text.qty {
+                    height: 40px;
+                    width: 40px;
+                }
+    
+                .bottom__addtocart {
+                    margin-top: 28px;
+                }
+            }
+        }
+
+        .product-info-stock-sku {
+            display: none;
+        }
+    }
+
+    .product.data.items {
+        .item.content {
+            padding: 30px;
+        }
+    }
+
+    .product--blogs {
+        &__column {
+            border-top: 1px solid #dddddd;
+            display: flex;
+            div {
+                width: 402px;
+                padding: 42px 30px;
+                text-align: center;
+                h3 {
+                    font-size: 20px;
+                    line-height: 36px;
+                    color: #222222;
+                    font-weight: 400;
+                    font-family: @font-family__base__lora;
+                    margin: 0;
+                }
+    
+                p {
+                    font-size: 13px;
+                    line-height: 20px;
+                    color: #333333;
+                    font-family: @font-family__base__roboto;
+                    margin: 0px;
+                }
+    
+                a {
+                    text-decoration: revert;
+                    color: #222222;
+                }
+            }
+        }
+    }
+
+    //
+    //  Sidebar product view
+    //  ---------------------------------------------
+    .sidebar {
+        .product-items {
+            .product-item {
+                .product-item-name {
+                    margin: 0 0 5px;
+                }
+
+                .product-item-actions {
+                    .actions-primary {
+                        padding: 0;
+                    }
+
+                    .actions-secondary {
+                        position: static;
+
+                        > .action {
+                            &:hover {
+                                &:before {
+                                    color: inherit;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .block-compare {
+        .product-item {
+            padding-left: 20px;
+        }
+    }
+}
+
+// xl (>= 1440px)
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+    .product-info-main {
+        width: 390px !important;
+        height: 886px;
+    }
+    
+    .fieldset {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .product.info.detailed {
+        width: 770px;
+    }
+}
+
+//
+//  Divante Extend
+//  _____________________________________________
+
+@import '_extend-specific.less';

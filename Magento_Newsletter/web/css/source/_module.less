@@ -10,6 +10,25 @@
       .title {
         display: block;
       }
+
+      .field .control:after {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 16px;
+        line-height: 80px;
+        color: #575757;
+        content: '\e608';
+        font-family: 'luma-icons';
+        margin: 0 0 0 -40px;
+        vertical-align: middle;
+        display: inline-block;
+        font-weight: normal;
+        overflow: hidden;
+        speak: none;
+        text-align: center;
+        z-index: 1;
+        position: absolute;
+    }
   
       .content {
         margin-bottom: 15px;
@@ -25,16 +44,13 @@
       }
 
       input {
+        position: relative;
         margin-top: 20px;
         padding-left: 16px;
         font-family : @font-family__base__roboto;
         height      : 40px;
         color       : #797979;
         font-size   : 13px;
-        &:after {
-          content: "oooo";
-          position: absolute;
-        }
       }
 
       a {

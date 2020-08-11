@@ -6,5 +6,11 @@ var config = {
         slick: {
             deps: ['jquery']
         }
+    },
+    map: {
+        '*': {
+            qtyInput:               'js/widgets/qty-input',
+            customCalendar:         'js/widgets/custom-calendar'
+        }
     }
 };
