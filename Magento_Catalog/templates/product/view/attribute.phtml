@@ -52,6 +52,19 @@ if ($_attributeType && $_attributeType == 'text') {
     <?php endif; ?>
     <div class="value" <?= /* @noEscape */ $_attributeAddAttribute ?>><?= /* @noEscape */ $_attributeValue ?></div>
 
+    <!-- sms list info -->
+    <div class="info__item">
+        <strong>This product includes</strong>
+        <div>
+            <p>1 x Amalfi 130 Coffee Table: $395.00  </p>
+            <p>1 x Amalfi Right Two Seater: $1095.00 </p>
+            <p>1 x Amalfi Left Two Seater: $1095.00 </p>
+            <p>1 x Amalfi Corner Sofa: $695.00 </p>
+        </div>
+        <p> RRP: $3,280.00</p>
+    </div>
+
+    <!-- cms comment -->
     <?php $questionData = [1, 2, 3]; ?>
     <div class="product--blogs">
         <?php foreach ($questionData as $value): ?>
@@ -64,16 +77,6 @@ if ($_attributeType && $_attributeType == 'text') {
         <?php endforeach; ?>
     </div>
 
-    <div class="info__item">
-        <strong>This product includes</strong>
-        <div>
-            <p>1 x Amalfi 130 Coffee Table: $395.00  </p>
-            <p>1 x Amalfi Right Two Seater: $1095.00 </p>
-            <p>1 x Amalfi Left Two Seater: $1095.00 </p>
-            <p>1 x Amalfi Corner Sofa: $695.00 </p>
-        </div>
-        <p> RRP: $3,280.00</p>
-    </div>
 </div>
 <?php endif; ?>
 

@@ -28,7 +28,7 @@ p { font-size: 13px; color: @color-2222222; font-family: @font-family__base__rob
     .mixmin-bottom-big (@color: #ffffff, @height: 40px, @width:180px, @background: @color-22b725, @font-size: 13px);
 }
 .bottom__standard{
-    .mixmin-bottom-small (@color: #ffffff, @height: 40px, @width:140px, @background: #3b3b3e, @font-size: 13px, @background-hover: #ffffff, @boder-hover:#3b3b3e);
+    .mixmin-bottom-small (@color: #3b3b3e, @height: 40px, @width:140px, @background: #ffffff, @font-size: 13px,@boder-hover:#3b3b3e);
 }
 .mixmin-bottom (@color, @height, @width, @background, @font-size) {
     height: @height;
@@ -44,11 +44,9 @@ p { font-size: 13px; color: @color-2222222; font-family: @font-family__base__rob
 .mixmin-bottom-big (@color, @height, @width, @background, @font-size) {
     .mixmin-bottom (@color: @color, @height: @height, @width: @width, @background: @background, @font-size: @font-size);
 }
-.mixmin-bottom-small (@color, @height, @width, @background, @font-size, @background-hover, @boder-hover) {
+.mixmin-bottom-small (@color, @height, @width, @background, @font-size, @boder-hover) {
     .mixmin-bottom (@color: @color, @height: @height, @width: @width, @background: @background, @font-size: @font-size);
-    &:hover{
-        .mixmin-bottom-hover (@background-hover: @background-hover, @boder-hover: @boder-hover);
-    }
+    border: 2px solid @boder-hover;
 }
 .mixmin-bottom-hover (@background-hover, @boder-hover) {
     background-color: @background-hover;
