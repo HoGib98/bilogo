@@ -6,8 +6,10 @@
        + admin -> content ->block -> edit block -> insert tat ca anh -> save
   
 # cai dat module best seller va newarrival
-  b1: clone git ve app/code : git lone https://github.com/HoGib98/module-best-seller.git
+  ++ tao folder : app/code/RLTSquare/BestSeller
+  b1: clone git ve app/code : git lone https://github.com/HoGib98/BestSeller.git
   b2: chay combo lenh : bin/magento c:c -> bin/magento setup:upgrade -> bin/magento s:s:d -f
+  b3: insert sql sp best seller : https://drive.google.com/file/d/1VFPVbYth_ABAzvXS4dYdOcEk7DLLo4FC/view?usp=sharing
   
 # cai dat thanh Magento_LayeredNavigation
  b1 : vao admin -> catalog -> category -> Add Subcategory -> them sp vs thay doi desing -> 1 colum
