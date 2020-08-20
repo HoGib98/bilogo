@@ -9,3 +9,6 @@
   b1: clone git ve app/code : git lone https://github.com/HoGib98/module-best-seller.git
   b2: chay combo lenh : bin/magento c:c -> bin/magento setup:upgrade -> bin/magento s:s:d -f
   
+# cai dat thanh Magento_LayeredNavigation
+ b1 : vao admin -> catalog -> category -> Add Subcategory -> them sp vs thay doi desing -> 1 colum
+  
